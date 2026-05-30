@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 
-RUN_DIR = Path("runs/brainblock_diverse")
+RUN_DIR = Path("results/brainblock_diverse")
 OUTPUT_DIR = RUN_DIR / "solution_images"
 
 COLORS = {
@@ -104,9 +104,9 @@ def make_contact_sheet(image_paths, out_path, title):
     plt.close(fig)
 
 
-def process_agent(agent_name):
-    input_path = RUN_DIR / agent_name / "discovered_solutions.txt"
-    out_dir = OUTPUT_DIR / agent_name
+def process_agent(agent_name, seed):
+    input_path = RUN_DIR / f"seed_{seed}" / agent_name / "discovered_solutions.txt"
+    out_dir = OUTPUT_DIR / f"seed_{seed}" / agent_name
     out_dir.mkdir(parents=True, exist_ok=True)
 
     solutions = parse_solutions(input_path)
@@ -117,16 +117,21 @@ def process_agent(agent_name):
         draw_solution(board, title, image_path)
         image_paths.append(image_path)
 
-    make_contact_sheet(image_paths, OUTPUT_DIR / f"{agent_name}_solutions_sheet.png", f"{agent_name.upper()} discovered solutions")
-    print(agent_name, "solutions:", len(solutions))
+    sheet_path = OUTPUT_DIR / f"seed_{seed}" / f"{agent_name}_solutions_sheet.png"
+    make_contact_sheet(image_paths, sheet_path, f"{agent_name.upper()} seed {seed} discovered solutions")
+    print(f"Seed {seed} {agent_name} solutions: {len(solutions)}")
     print("saved to:", out_dir)
 
 
-def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    process_agent("dqn")
-    process_agent("ppo")
+def main(seeds=None):
+    if seeds is None:
+        seeds = [42, 100, 123, 456, 789]
+    for seed in seeds:
+        process_agent("dqn", seed)
+        process_agent("ppo", seed)
+
 
 
 if __name__ == "__main__":
     main()
+
