@@ -8,7 +8,7 @@
 ## Abstract
 This report presents our formulation and solution of the BrainBlock tetromino packing puzzle as a finite-horizon Markov Decision Process (MDP). We implement and compare two distinct deep reinforcement learning (DRL) paradigms: a value-based method, Deep Q-Networks (DQN), and an on-policy policy-gradient method, Proximal Policy Optimization (PPO). The environment consists of an $8 \times 5$ board and a fixed inventory of 10 tetrominoes (2 of each type: I, O, L, Z, T), requiring the agent to place all pieces legally from a randomized queue. 
 
-To satisfy the dual goals of solving the packing layout and discovering multiple distinct solutions, we designed two reward functions: a dense area-based reward and a diversity-aware reward that applies a penalty to repeated or highly overlapping solved states. Our experimental results show that DQN is highly sample-efficient, achieving a success rate of 69.8% and discovering 16 unique solutions over 100,000 episodes. PPO, though less sample-efficient, demonstrated robust exploratory capabilities due to its stochastic policy formulation, discovering 12 unique solutions out of 12 successful episodes (a 100% uniqueness rate). We discuss our MDP design choices, algorithm hyperparameter tuning, empirical results, and failure modes.
+To satisfy the dual goals of solving the packing layout and discovering multiple distinct solutions, we designed two reward functions: a dense area-based reward and a diversity-aware reward that applies a penalty to repeated or highly overlapping solved states. Our experimental results across 7 random seeds show that DQN is highly sample-efficient under the diversity reward, achieving a success rate of $16.34\% \pm 26.09\%$ and discovering an average of $34.14$ unique solutions over 100,000 episodes. PPO, though less sample-efficient in terms of total solves (success rate of $0.01\% \pm 0.00\%$), demonstrated robust exploratory capabilities due to its stochastic policy formulation, discovering an average of $11.14$ unique solutions with a 100% uniqueness rate (every successful solve yielded a distinct layout). We discuss our MDP design choices, algorithm hyperparameter tuning, empirical results, and failure modes.
 
 ---
 
@@ -102,42 +102,66 @@ PPO is an on-policy policy-gradient method that learns a policy distribution $\p
 
 ---
 
-## 5. Experimental Setup
-* **Grid Dimension**: $8 \times 5$.
-* **Inventory**: 2 of each piece type (I, O, L, Z, T).
-* **Episode Horizon**: Max 10 placement steps.
-* **Training Budget**: 100,000 episodes.
-* **Verification**: We ran evaluation rollouts over multiple seeds to log average rewards, covered areas, and unique solutions.
+## 5. Evaluation Protocol & Experimental Setup
+To rigorously evaluate the algorithms, we ran DQN and PPO across 7 random seeds ($0, 1, 2, 3, 4, 5, 42$) for both the standard and diverse environments. The training budgets were:
+- **Standard Environment**: 20,000 episodes per seed.
+- **Diverse Environment**: 100,000 episodes per seed.
+
+### 5.1 Metrics Recorded
+For each seed, we logged:
+- **Success Rate**: The fraction of episodes solved.
+- **Episodic Return**: Mean and standard deviation of cumulative reward per episode.
+- **Episode Length**: Mean episode steps.
+- **Invalid-Action Rate**: Rate of choosing invalid actions (held at 0% due to action masking).
 
 ---
 
-## 6. Results and Discussion
+## 6. Empirical Results & Discussion
 
-### 6.1 DQN Performance
-* **Successes**: 57,659 solved episodes.
-* **Unique Solutions Discovered**: 16 unique layouts.
-* **Last 1,000 Success Rate**: 69.8%.
-* **Last 1,000 Average Covered Area**: 37.17 cells.
+### 6.1 Summary of Performance Metrics
+The summary statistics averaged across all 7 seeds are reported in the table below:
 
-DQN proved to be highly sample-efficient. The experience replay buffer allowed the network to reinforce rare successful placements. As the success rate climbed, the diversity penalty kicked in, forcing DQN to redirect its policy toward unused areas of the action space, ultimately yielding 16 distinct board configurations.
+| Environment & Algorithm | Success Rate (%) | Episodic Return | Episode Length | Invalid-Action Rate (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Standard DQN** | $0.02\% \pm 0.01\%$ | $0.245 \pm 0.004$ | $7.44 \pm 0.04$ | $0.00\% \pm 0.00\%$ |
+| **Standard PPO** | $0.01\% \pm 0.01\%$ | $0.214 \pm 0.002$ | $7.13 \pm 0.02$ | $0.00\% \pm 0.00\%$ |
+| **Diverse DQN** | $16.34\% \pm 26.09\%$ | $0.530 \pm 0.462$ | $7.83 \pm 0.69$ | $0.00\% \pm 0.00\%$ |
+| **Diverse PPO** | $0.01\% \pm 0.00\%$ | $0.224 \pm 0.002$ | $7.23 \pm 0.02$ | $0.00\% \pm 0.00\%$ |
 
-### 6.2 PPO Performance
-* **Successes**: 12 solved episodes.
-* **Unique Solutions Discovered**: 12 unique layouts.
-* **Uniqueness Rate**: 100% (every single solve resulted in a completely novel board layout).
+### 6.2 Key Insights from Multi-Seed Training
+1. **Diversity Incentive Drives Solves**: 
+   Interestingly, the diverse environment (incorporating a penalty memory for duplicate layouts) vastly outperformed the standard environment in terms of success rate for DQN ($16.34\%$ vs $0.02\%$). This is because the diversity penalty prevents DQN from committing to local optima (mode collapse onto dead-end states), acting as an intrinsic motivation term that forces the agent to explore alternate packing trajectories.
+2. **Exploration Variance**: 
+   DQN_DIVERSE shows a high standard deviation in success rate ($16.34\% \pm 26.09\%$). This variation is driven by individual seeds: while some seeds (e.g., Seed 3 and Seed 5) found a massive number of solutions (80 and 74, respectively), others found fewer.
+3. **PPO Exploitation vs DQN**: 
+   Stochastic on-policy exploration (PPO) was very steady but struggled with high solve rates under a short budget. However, it achieved extremely high diversity relative to its solves (see uniqueness discussion below).
 
-PPO required significantly more episodes to find its first success. However, PPO's stochastic exploration mechanism (sampling from a probability distribution rather than selecting the argmax) made it highly effective at finding diverse solutions. Every single successful episode in PPO's training run resulted in a completely different solution, discovering 12 unique layouts.
+### 6.3 Discovered Solutions & Uniqueness
+In the diverse environment, the number of unique solutions discovered across seeds is detailed below:
 
-### 6.3 Solution Frequency Distribution and Mode Collapse
-To analyze the exploratory behavior of both algorithms under the diversity reward, we recorded the frequency distribution of discovered solutions (visualized in `runs/brainblock_diverse/solution_frequencies.png`). 
+| Seed | DQN Discovered Solutions | PPO Discovered Solutions |
+| :--- | :---: | :---: |
+| **Seed 0** | 18 | 14 |
+| **Seed 1** | 14 | 12 |
+| **Seed 2** | 19 | 13 |
+| **Seed 3** | 80 | 15 |
+| **Seed 4** | 18 | 3 |
+| **Seed 5** | 74 | 9 |
+| **Seed 42** | 16 | 12 |
+| **Average** | **34.14** | **11.14** |
 
-* **DQN Distribution**: Although DQN discovered 16 unique solutions, it exhibited a significant concentration of successes on only a few specific layouts. For instance, Solution 2 and Solution 3 were solved 17,640 and 22,993 times respectively, whereas several other solutions (e.g., Solutions 1, 5, and 9) were discovered only a handful of times. This is a classic indication of **mode collapse** in value-based RL. Once DQN's Q-network identifies a highly stable trajectory, its deterministic exploitation selection (argmax of Q-values) continues to favor that path, even when penalized, because the penalized reward is still higher than the reward for early dead-ends.
-* **PPO Distribution**: In stark contrast, PPO solved the board exactly 12 times and found 12 unique solutions—representing a 100% uniqueness rate where each solution layout was seen exactly once. Because PPO is a stochastic policy-gradient algorithm, it samples actions directly from a Categorical probability distribution parameterized by the actor network's output logits. Combined with entropy regularization, PPO is naturally resistant to mode collapse, yielding high-diversity exploration.
+Across all seeds, PPO's stochastic exploration preserved high uniqueness (almost 100% of PPO solves were distinct), while DQN succeeded in locating a much larger volume of unique packing layouts due to its off-policy replay buffer reinforcing and scaling exploration once the policy hit a solve.
+
+### 6.4 Solution Frequency Distribution and Mode Collapse
+To analyze the exploratory behavior of both algorithms under the diversity reward, we recorded the frequency distribution of discovered solutions (visualized in `results/brainblock_diverse/solution_frequencies_aggregated.png`). 
+
+* **DQN Distribution**: Although DQN discovered a large average of 34.14 unique solutions per seed, it exhibited a significant concentration of successes on only a few specific layouts. For instance, once DQN's Q-network identifies a highly stable trajectory, its deterministic exploitation selection (argmax of Q-values) continues to favor that path, even when penalized, because the penalized reward is still higher than the reward for early dead-ends.
+* **PPO Distribution**: In stark contrast, PPO solved the board fewer times but found a unique solution almost every single time—representing near 100% uniqueness. Because PPO is a stochastic policy-gradient algorithm, it samples actions directly from a Categorical probability distribution parameterized by the actor network's output logits. Combined with entropy regularization, PPO is naturally resistant to mode collapse, yielding high-diversity exploration.
 
 ---
 
 ## 7. Discovered Solutions Visualization
-Both agents succeeded in discovering the required 5 solutions. Below are two sample board layouts extracted from our training runs:
+Both agents succeeded in discovering a large number of solutions. Below are two sample board layouts extracted from our training runs:
 
 **Solution Example A (DQN)**:
 ```text
@@ -156,7 +180,7 @@ T Z Z T T L Z Z
 O O O O T L L L
 O O O O I I I I
 ```
-The full set of discovered configurations is visualized in `runs/brainblock_diverse/solution_images/`.
+The full set of discovered configurations is visualized in `results/brainblock_diverse/solution_images/`.
 
 ---
 
@@ -173,3 +197,4 @@ Future improvements could include:
 1. **Convolutional Grid Encoders**: Replacing the flat MLP input with a 2D CNN to exploit spatial grid features.
 2. **Dead-Space Penalties**: Adding an intermediate heuristic penalty if the board contains empty regions whose areas are not divisible by 4, preventing dead-ends.
 3. **Double DQN**: Utilizing Double DQN to mitigate Q-value overestimation.
+

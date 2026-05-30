@@ -7,7 +7,6 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from brainblock_standard.dqn_agent import train_dqn
-from brainblock_standard.plotting import save_combined_plot
 from brainblock_standard.ppo_agent import train_ppo
 
 

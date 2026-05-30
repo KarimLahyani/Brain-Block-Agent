@@ -6,26 +6,26 @@ This file details our empirical findings from training both DQN and PPO agents o
 
 ## 1. DQN Diversity Performance
 
-* **Total Episodes**: 100,000
-* **Successes (Solves)**: 57,659
-* **Unique Solutions Discovered**: 16 unique board configurations
-* **Last 1,000 Episodes Success Rate**: 69.8%
-* **Last 1,000 Episodes Average Covered Area**: 37.17 / 40 cells
+* **Total Episodes**: 100,000 per seed (across 7 seeds: 0, 1, 2, 3, 4, 5, 42)
+* **Average Success Rate**: $16.34\% \pm 26.09\%$
+* **Average Episodic Return**: $0.530 \pm 0.462$
+* **Average Unique Solutions Discovered**: 34.14 unique board configurations per seed (up to 80 on Seed 3)
 
 ### Analysis
-DQN demonstrated exceptional sample efficiency. Due to the reuse of experiences via the replay buffer, DQN quickly learned the placement rules and began completing the board early in training. As it solved the board repeatedly, the diversity penalty successfully pushed it to explore alternative layouts, leading to 16 unique solutions.
+DQN demonstrated high sample efficiency. Due to the experience replay buffer reinforcing successful packing layouts, DQN could scale its solve rate significantly on seeds where it discovered packing strategies. The diversity penalty successfully drove DQN to explore alternative configurations, finding a high absolute number of unique layouts (average of 34.14 per seed). However, due to the off-policy replay buffer and argmax selection, it showed higher concentration of solves on a subset of layout modes.
 
 ---
 
 ## 2. PPO Diversity Performance
 
-* **Total Episodes**: 100,000
-* **Successes (Solves)**: 12
-* **Unique Solutions Discovered**: 12 unique board configurations
-* **Uniqueness Rate**: 100% (every single success resulted in a completely new solution layout)
+* **Total Episodes**: 100,000 per seed (across 7 seeds: 0, 1, 2, 3, 4, 5, 42)
+* **Average Success Rate**: $0.01\% \pm 0.00\%$
+* **Average Episodic Return**: $0.224 \pm 0.002$
+* **Average Unique Solutions Discovered**: 11.14 unique board configurations per seed (with 11.14 average solves per seed)
+* **Uniqueness Rate**: ~100% (almost every single success resulted in a completely new solution layout)
 
 ### Analysis
-PPO was less sample efficient than DQN, requiring more training steps to achieve its first successes. However, because PPO uses a stochastic policy-gradient formulation (sampling actions from a Categorical probability distribution), it did not get stuck repeating the same solution. In fact, every single time PPO successfully completed the board, it discovered a brand new solution, resulting in 12 distinct packing configurations.
+PPO was less sample-efficient, requiring more episodes to find successful packs. However, because PPO parameterizes a stochastic policy and samples actions from a Categorical distribution, it is naturally robust against mode collapse. When PPO did succeed, it almost always found a completely distinct packing layout, maintaining a ~100% uniqueness rate and showing its strength in unbiased exploration of the packing space.
 
 ---
 

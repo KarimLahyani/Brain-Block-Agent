@@ -154,7 +154,4 @@ def train_dqn(episodes, seed, out_dir):
             print(f"DQN (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | avg area {avg_area:.2f} | success {success_count}")
 
     save_results(rows, out_dir, "dqn")
-    model_path = out_dir / "dqn_model.pt"
-    torch.save(model.state_dict(), model_path)
-    print("saved:", model_path)
     return rows

@@ -45,10 +45,10 @@ The default configuration in `main.py` is:
 ```python
 ALGO = "both"        # choose "dqn", "ppo", or "both"
 EPISODES = 100_000   # training budget
-SEED = 42            # random seed
+SEEDS = [0, 1, 2, 3, 4, 5, 42]  # random seeds
 ```
 
-All models, metric CSV files, and progress plots are saved in `runs/brainblock_diverse/`.
+All metric CSV files, progress plots, and solution files are saved in `results/brainblock_diverse/`.
 
 ---
 
@@ -59,14 +59,15 @@ Once training is complete, you can generate visual grids of all unique layouts d
 python -X utf8 -m brainblock_diverse.make_solution_images
 ```
 
-The output images are saved under `runs/brainblock_diverse/solution_images/` as `dqn_solutions_sheet.png` and `ppo_solutions_sheet.png`.
+The output images are saved under `results/brainblock_diverse/solution_images/seed_{seed}/` along with contact sheets.
 
 ---
 
 ## Result Summary
 
-In our experiments running 100,000 episodes:
-* **DQN** discovered **16 unique solutions**.
-* **PPO** discovered **12 unique solutions**.
+Averaged across the 7 evaluated seeds:
+* **DQN** discovered an average of **34.14 unique solutions** per seed (discovering up to 80 unique layouts on seed 3).
+* **PPO** discovered an average of **11.14 unique solutions** per seed.
 
-Thanks to rollout batching (`ROLLOUT_EPISODES = 32`), PPO's training signal is highly stable, allowing its natural policy-gradient stochasticity to explore and discover a wide variety of unique configurations (12 configurations). DQN remains highly sample-efficient and finds its unique configurations faster in early training.
+DQN remains highly sample-efficient and finds a larger volume of unique configurations. PPO's stochastic policy gradient with entropy regularization ensures that almost all of its solves (100% uniqueness rate) represent completely distinct packing layouts, making it highly effective at avoiding mode collapse.
+

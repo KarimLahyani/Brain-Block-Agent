@@ -58,35 +58,7 @@ def save_results(rows, out_dir, name):
     print("saved:", fig_path)
 
 
-def save_combined_plot(all_rows, out_dir):
-    out_dir.mkdir(parents=True, exist_ok=True)
 
-    plt.figure(figsize=(10, 7))
-
-    plt.subplot(2, 1, 1)
-    for algo in sorted(set(r["algo"] for r in all_rows)):
-        rows = [r for r in all_rows if r["algo"] == algo]
-        rewards = [r["total_reward"] for r in rows]
-        plt.plot(moving_average(rewards), label=algo)
-    plt.ylabel("moving avg reward")
-    plt.grid(alpha=0.3)
-    plt.legend()
-
-    plt.subplot(2, 1, 2)
-    for algo in sorted(set(r["algo"] for r in all_rows)):
-        rows = [r for r in all_rows if r["algo"] == algo]
-        unique = [r["unique_solutions"] for r in rows]
-        plt.plot(unique, label=algo)
-    plt.xlabel("episode")
-    plt.ylabel("unique solutions")
-    plt.grid(alpha=0.3)
-    plt.legend()
-
-    plt.tight_layout()
-    fig_path = out_dir / "dqn_vs_ppo_diversity.png"
-    plt.savefig(fig_path, dpi=160)
-    plt.close()
-    print("saved:", fig_path)
 
 
 def save_aggregated_plots(out_dir, seeds):

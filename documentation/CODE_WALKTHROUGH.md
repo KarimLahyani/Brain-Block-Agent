@@ -74,13 +74,13 @@ All files for the diversity-aware agent reside in `brainblock_diverse/`:
 
 ## 4. Summary of Empirical Results
 
-We ran both algorithms for 100,000 episodes on the diversity-reward environment:
+We evaluated DQN and PPO across 7 random seeds ($0, 1, 2, 3, 4, 5, 42$) on both standard and diversity-reward configurations:
 
-* **DQN**:
-  * **Successes**: 57,659 solves.
-  * **Unique Solutions**: 16 unique layouts.
-  * DQN converged quickly to a high success rate and successfully diversified its solutions to find 16 distinct configurations.
-* **PPO**:
-  * **Successes**: 12 solves.
-  * **Unique Solutions**: 12 unique layouts.
-  * **Uniqueness Rate**: 100%. Every time PPO solved the board, it found a completely new solution layout, demonstrating its natural strength in stochastic exploration.
+* **Standard Environment (20,000 episodes)**:
+  * **DQN**: Success Rate of $0.02\% \pm 0.01\%$, Episodic Return of $0.245 \pm 0.004$.
+  * **PPO**: Success Rate of $0.01\% \pm 0.01\%$, Episodic Return of $0.214 \pm 0.002$.
+* **Diversity-Reward Environment (100,000 episodes)**:
+  * **DQN**: Success Rate of $16.34\% \pm 26.09\%$, Episodic Return of $0.530 \pm 0.462$. Discovered an average of **34.14 unique solutions** per seed (up to 80 on Seed 3).
+  * **PPO**: Success Rate of $0.01\% \pm 0.00\%$, Episodic Return of $0.224 \pm 0.002$. Discovered an average of **11.14 unique solutions** per seed.
+  * **Uniqueness Rate**: PPO achieves near-100% uniqueness in its solves. DQN finds a larger absolute volume of unique solutions but shows higher concentration on specific layout modes.
+  * **Diversity Penalty Advantage**: Interestingly, DQN performed significantly better in the diversity-reward environment ($16.34\%$ success rate) than the standard environment ($0.02\%$), as the duplication penalty acted as an intrinsic motivator that drove the agent away from repetitive local dead-ends.

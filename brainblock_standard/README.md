@@ -10,7 +10,6 @@ This directory contains our standard implementation of the BrainBlock environmen
 * **`ppo_agent.py`**: Proximal Policy Optimization (PPO) implementation using an Actor-Critic architecture and rollout trajectory batching.
 * **`plotting.py`**: Metric logger and plot generator.
 * **`main.py`**: Entry-point script that launches training (runs both DQN and PPO in parallel by default).
-* **`evaluate_saved.py`**: Evaluation script that loads saved weights and runs deterministic validation episodes.
 
 ---
 
@@ -27,26 +26,11 @@ The training parameters are configured at the top of `main.py`:
 ```python
 ALGO = "both"      # choose "dqn", "ppo", or "both"
 EPISODES = 20_000  # total training episodes
-SEED = 42          # random seed
+SEEDS = [0, 1, 2, 3, 4, 5, 42]  # random seeds
 ```
 
-Training metrics and plots will be saved to `runs/brainblock_standard/`.
+Training metrics and plots will be saved to `results/brainblock_standard/`.
 
----
-
-## Evaluating Trained Models
-
-To run deterministic evaluation rollouts (10 episodes) on your saved models and inspect the final boards:
-
-### Evaluate DQN:
-```powershell
-python -X utf8 -m brainblock_standard.evaluate_saved --algo dqn --model-path runs\brainblock_standard\dqn\dqn_model.pt --episodes 10
-```
-
-### Evaluate PPO:
-```powershell
-python -X utf8 -m brainblock_standard.evaluate_saved --algo ppo --model-path runs\brainblock_standard\ppo\ppo_model.pt --episodes 10
-```
 
 ---
 

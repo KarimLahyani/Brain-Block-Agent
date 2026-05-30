@@ -50,21 +50,28 @@ python -X utf8 -m brainblock_diverse.make_solution_images
 ```
 
 The generated PNG grids are saved to:
-`runs/brainblock_diverse/solution_images/`
+`results/brainblock_diverse/solution_images/`
 
 ---
 
 ## 4. Summary of Training Runs and Results
 
-We evaluated both agents over a budget of 100,000 episodes on the diversity-reward environment. The results are summarized below:
+We evaluated DQN and PPO agents across 7 random seeds ($0, 1, 2, 3, 4, 5, 42$) on both the standard (20,000 episodes) and diversity-reward (100,000 episodes) environments. The aggregated results are summarized below:
 
-* **DQN (Deep Q-Network)**:
-  * **Successes**: 57,659 solved episodes.
-  * **Unique Solutions Discovered**: 16 unique board configurations.
-  * DQN demonstrated high sample efficiency, quickly learning a stable policy and starting to solve the puzzle early in training.
-* **PPO (Proximal Policy Optimization)**:
-  * **Successes**: Stable solves after rollout batching improvements.
-  * **Unique Solutions Discovered**: 12 unique board configurations.
-  * PPO is naturally more stochastic due to its policy-gradient distribution sampling, which helped it discover a high variety of unique solutions (12 configurations). It required more episodes than DQN to achieve stable coverage, showing standard policy-gradient sample-efficiency characteristics on highly constrained discrete puzzles.
+| Environment & Algorithm | Success Rate (%) | Episodic Return | Episode Length | Invalid-Action Rate (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Standard DQN** | $0.02\% \pm 0.01\%$ | $0.245 \pm 0.004$ | $7.44 \pm 0.04$ | $0.00\% \pm 0.00\%$ |
+| **Standard PPO** | $0.01\% \pm 0.01\%$ | $0.214 \pm 0.002$ | $7.13 \pm 0.02$ | $0.00\% \pm 0.00\%$ |
+| **Diverse DQN** | $16.34\% \pm 26.09\%$ | $0.530 \pm 0.462$ | $7.83 \pm 0.69$ | $0.00\% \pm 0.00\%$ |
+| **Diverse PPO** | $0.01\% \pm 0.00\%$ | $0.224 \pm 0.002$ | $7.23 \pm 0.02$ | $0.00\% \pm 0.00\%$ |
 
-To stabilize PPO training, we update the model using rollouts collected over batches of 32 episodes (`ROLLOUT_EPISODES = 32`) rather than single-episode updates. This drastically reduces gradient noise.
+### Key Findings from Multi-Seed Evaluation:
+* **Diversity Reward as Exploration Incentive**: The diversity penalty environment dramatically improved DQN's success rate ($16.34\%$ success rate) compared to the standard environment ($0.02\%$). By penalizing duplicate layouts, it prevents the agent from falling into early dead-end local optima (mode collapse).
+* **Discovered Unique Solutions**:
+  * **Diverse DQN**: Discovered an average of **34.14 unique solutions** per seed, reaching up to 80 unique configurations on Seed 3.
+  * **Diverse PPO**: Discovered an average of **11.14 unique solutions** per seed.
+* **Exploration Styles**:
+  * **DQN** is highly sample-efficient and scales up the number of solves once a pathway is found, but displays a higher concentration of solves on a few modes.
+  * **PPO** solves the board less frequently under this budget, but achieves a near-100% uniqueness rate (almost every single success is a completely unique layout) due to its stochastic policy formulation and entropy regularization.
+
+To stabilize PPO training, rollouts are collected over batches of 32 episodes (`ROLLOUT_EPISODES = 32`) to reduce gradient noise.

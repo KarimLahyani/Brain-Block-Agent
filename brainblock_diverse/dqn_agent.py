@@ -155,8 +155,6 @@ def train_dqn(episodes, seed, out_dir):
             print(f"DQN (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
 
     save_results(rows, out_dir, "dqn_diverse")
-    torch.save(model.state_dict(), out_dir / "dqn_diverse_model.pt")
     memory.save(out_dir / "discovered_solutions.txt")
-    print("saved:", out_dir / "dqn_diverse_model.pt")
     print("saved:", out_dir / "discovered_solutions.txt")
     return rows

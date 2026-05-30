@@ -168,7 +168,4 @@ def train_ppo(episodes, seed, out_dir):
     ppo_update(model, optimizer, rollout)
 
     save_results(rows, out_dir, "ppo")
-    model_path = out_dir / "ppo_model.pt"
-    torch.save(model.state_dict(), model_path)
-    print("saved:", model_path)
     return rows
