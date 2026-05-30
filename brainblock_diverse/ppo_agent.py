@@ -157,7 +157,7 @@ def train_ppo(episodes, seed, out_dir):
             avg_reward = np.mean([r["total_reward"] for r in last])
             unique = rows[-1]["unique_solutions"]
             success_count = np.sum([r["success"] for r in last])
-            print(f"PPO episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
+            print(f"PPO (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
 
     ppo_update(model, optimizer, rollout)
 

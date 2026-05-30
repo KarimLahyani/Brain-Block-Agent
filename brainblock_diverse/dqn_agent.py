@@ -152,7 +152,7 @@ def train_dqn(episodes, seed, out_dir):
             avg_reward = np.mean([r["total_reward"] for r in last])
             unique = rows[-1]["unique_solutions"]
             success_count = np.sum([r["success"] for r in last])
-            print(f"DQN episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
+            print(f"DQN (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
 
     save_results(rows, out_dir, "dqn_diverse")
     torch.save(model.state_dict(), out_dir / "dqn_diverse_model.pt")

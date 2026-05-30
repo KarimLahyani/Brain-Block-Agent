@@ -163,7 +163,7 @@ def train_ppo(episodes, seed, out_dir):
             avg_reward = np.mean([r["total_reward"] for r in last])
             avg_area = np.mean([r["covered_area"] for r in last])
             success_count = np.sum([r["success"] for r in last])
-            print(f"PPO episode {episode} | avg reward {avg_reward:.2f} | avg area {avg_area:.2f} | success {success_count}")
+            print(f"PPO (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | avg area {avg_area:.2f} | success {success_count}")
 
     ppo_update(model, optimizer, rollout)
 
