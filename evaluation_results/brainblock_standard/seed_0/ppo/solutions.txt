@@ -1,0 +1,6 @@
+Solution 1
+O O L L Z Z L L
+O O L Z Z Z Z L
+O O L T Z Z T L
+O O T T T T T T
+I I I I I I I I

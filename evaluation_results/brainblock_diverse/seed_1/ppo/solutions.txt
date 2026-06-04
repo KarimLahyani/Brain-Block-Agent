@@ -1,0 +1,6 @@
+Solution 1 | seen 993 time(s)
+O O T T T Z Z Z
+O O L T Z Z Z Z
+O O L T T T Z L
+O O L L T L L L
+I I I I I I I I

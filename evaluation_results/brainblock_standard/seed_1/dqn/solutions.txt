@@ -1,0 +1,41 @@
+Solution 1
+I O O I I I I L
+I O O L T T T L
+I L L L Z T L L
+I Z Z T Z Z O O
+Z Z T T T Z O O
+
+Solution 2
+I L L I I I I L
+I L O O T T T L
+I L O O Z T L L
+I Z Z T Z Z O O
+Z Z T T T Z O O
+
+Solution 3
+I O O I I I I L
+I O O Z T T T L
+I L Z Z Z T L L
+I L Z T Z Z O O
+L L T T T Z O O
+
+Solution 4
+I L L I I I I L
+I L Z Z T T T L
+I L Z Z Z T L L
+I T Z Z O O O O
+T T T Z O O O O
+
+Solution 5
+I L L I I I I L
+I L O O T T T L
+I L O O Z T L L
+I T Z Z Z Z O O
+T T T Z Z Z O O
+
+Solution 6
+I O O I I I I L
+I O O L T T T L
+I L L L Z T L L
+I T Z Z Z Z O O
+T T T Z Z Z O O

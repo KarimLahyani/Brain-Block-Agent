@@ -1,0 +1,174 @@
+Solution 1
+O O I I I I O O
+O O I I I I O O
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 2
+I I I I O O O O
+I I I I O O O O
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 3
+I I I I O O O O
+I I I I O O O O
+L L L Z Z T T T
+L Z Z T Z Z T L
+Z Z T T T L L L
+
+Solution 4
+O O O O I I I I
+O O O O I I I I
+T T T T T T Z Z
+L T Z Z T Z Z L
+L L L Z Z L L L
+
+Solution 5
+O O O O I I I I
+O O O O I I I I
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 6
+O O I I I I O O
+O O I I I I O O
+L L L Z Z L L L
+L Z Z T Z Z T L
+Z Z T T T T T T
+
+Solution 7
+O O I I I I O O
+O O I I I I O O
+L L Z T T T Z Z
+L Z Z T T Z Z L
+L Z T T T L L L
+
+Solution 8
+O O O O I I I I
+O O O O T T T I
+L L L Z Z T L I
+L Z Z T Z Z L I
+Z Z T T T L L I
+
+Solution 9
+I I I I O O O O
+I I I I O O O O
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 10
+O O O O I I I I
+O O O O T T T I
+T T T Z Z T L I
+L T Z Z Z Z L I
+L L L Z Z L L I
+
+Solution 11
+O O I I I I O O
+O O I I I I O O
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 12
+I I I I O O O O
+I I I I O O O O
+L L L Z Z L L L
+L Z Z T Z Z T L
+Z Z T T T T T T
+
+Solution 13
+O O I I I I O O
+O O I I I I O O
+L L Z Z Z T T T
+L Z Z T Z Z T L
+L Z T T T L L L
+
+Solution 14
+O O I I I I O O
+O O I I I I O O
+L L L T T T Z Z
+L T Z Z T Z Z L
+T T T Z Z L L L
+
+Solution 15
+O O I I I I O O
+O O I I I I O O
+L L L T T T Z Z
+L Z Z T T Z Z L
+Z Z T T T L L L
+
+Solution 16
+I I I I O O O O
+I I I I O O O O
+L L L T T T Z Z
+L T Z Z T Z Z L
+T T T Z Z L L L
+
+Solution 17
+O O O O I I I I
+O O O O I I I I
+L L Z Z Z T T T
+L Z Z T Z Z T L
+L Z T T T L L L
+
+Solution 18
+I I I I O O O O
+I I I I O O O O
+L L L T T T Z Z
+L Z Z T T Z Z L
+Z Z T T T L L L
+
+Solution 19
+O O O O I I I I
+O O O O I I I I
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 20
+O O O O I I I I
+O O O O I I I I
+L L L T T T Z Z
+L T Z Z T Z Z L
+T T T Z Z L L L
+
+Solution 21
+O O O O I I I I
+O O O O T T T I
+L L L Z Z T L I
+L T Z Z Z Z L I
+T T T Z Z L L I
+
+Solution 22
+O O I I I I O O
+O O I I I I O O
+L L Z Z Z L L L
+L Z Z T Z Z T L
+L Z T T T T T T
+
+Solution 23
+O O O O I I I I
+O O O O I I I I
+L L L T T T Z Z
+L Z Z T T Z Z L
+Z Z T T T L L L
+
+Solution 24
+O O I I I I O O
+O O I I I I O O
+T T T Z Z L L L
+L T Z Z Z Z T L
+L L L Z Z T T T
+
+Solution 25
+O O I I I I O O
+O O I I I I O O
+L L L Z Z T T T
+L Z Z T Z Z T L
+Z Z T T T L L L

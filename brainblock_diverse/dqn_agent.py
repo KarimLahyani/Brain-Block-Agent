@@ -27,7 +27,7 @@ class DQN(nn.Module):
 
 
 class ReplayBuffer:
-    def __init__(self, capacity=10000):
+    def __init__(self, capacity=100_000):
         self.buffer = deque(maxlen=capacity)
 
     def push(self, transition):
@@ -80,7 +80,7 @@ def train_dqn_step(model, target_model, optimizer, buffer, batch_size=32, gamma=
         max_next_q = next_q.max(1)[0]
         target = rewards + gamma * max_next_q * (1 - dones)
 
-    loss = F.mse_loss(q_values, target)
+    loss = F.smooth_l1_loss(q_values, target)
 
     optimizer.zero_grad()
     loss.backward()
@@ -99,7 +99,7 @@ def train_dqn(episodes, seed, out_dir):
     target_model = DQN()
     target_model.load_state_dict(model.state_dict())
 
-    optimizer = optim.Adam(model.parameters(), lr=1e-3)
+    optimizer = optim.Adam(model.parameters(), lr=3e-4)
     buffer = ReplayBuffer()
     epsilon = 0.9
     rows = []
@@ -128,7 +128,8 @@ def train_dqn(episodes, seed, out_dir):
         if episode % 100 == 0:
             target_model.load_state_dict(model.state_dict())
 
-        epsilon = max(0.05, epsilon * 0.995)
+        # Linear decay: reach minimum epsilon (0.05) at 20% of training episodes
+        epsilon = max(0.05, epsilon - (0.9 - 0.05) / (0.2 * episodes))
 
         rows.append(
             {
@@ -155,6 +156,8 @@ def train_dqn(episodes, seed, out_dir):
             print(f"DQN (seed {seed}) episode {episode} | avg reward {avg_reward:.2f} | success {success_count} | unique {unique}")
 
     save_results(rows, out_dir, "dqn_diverse")
+    torch.save(model.state_dict(), out_dir / "dqn_diverse_model.pt")
     memory.save(out_dir / "discovered_solutions.txt")
+    print("saved:", out_dir / "dqn_diverse_model.pt")
     print("saved:", out_dir / "discovered_solutions.txt")
     return rows

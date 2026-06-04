@@ -57,7 +57,7 @@ def discounted_returns(rewards, gamma=0.95):
     return returns
 
 
-def ppo_update(model, optimizer, trajectory, gamma=0.95, clip_eps=0.2):
+def ppo_update(model, optimizer, trajectory, clip_eps=0.2):
     if len(trajectory["states"]) == 0:
         return
 
@@ -66,7 +66,7 @@ def ppo_update(model, optimizer, trajectory, gamma=0.95, clip_eps=0.2):
     actions = torch.tensor(trajectory["actions"], dtype=torch.long)
     old_log_probs = torch.tensor(trajectory["log_probs"], dtype=torch.float32)
     old_values = torch.tensor(trajectory["values"], dtype=torch.float32)
-    returns = torch.tensor(discounted_returns(trajectory["rewards"], gamma), dtype=torch.float32)
+    returns = torch.tensor(trajectory["returns"], dtype=torch.float32)
 
     advantages = returns - old_values
     if len(advantages) > 1:
@@ -98,9 +98,9 @@ def train_ppo(episodes, seed, out_dir):
     memory = SolutionMemory()
     env = BrainBlockDiverseEnv(solution_memory=memory)
     model = ActorCritic()
-    optimizer = optim.Adam(model.parameters(), lr=1e-3)
+    optimizer = optim.Adam(model.parameters(), lr=3e-4)
     rows = []
-    rollout = {"states": [], "masks": [], "actions": [], "log_probs": [], "values": [], "rewards": []}
+    rollout = {"states": [], "masks": [], "actions": [], "log_probs": [], "values": [], "returns": []}
 
     for episode in range(1, episodes + 1):
         state, info = env.reset(seed=seed * 100000 + episode)
@@ -128,12 +128,18 @@ def train_ppo(episodes, seed, out_dir):
             diversity_penalty += info.get("diversity_penalty", 0)
             steps += 1
 
-        for key in rollout:
-            rollout[key].extend(trajectory[key])
+        returns = discounted_returns(trajectory["rewards"], gamma=0.95)
+
+        rollout["states"].extend(trajectory["states"])
+        rollout["masks"].extend(trajectory["masks"])
+        rollout["actions"].extend(trajectory["actions"])
+        rollout["log_probs"].extend(trajectory["log_probs"])
+        rollout["values"].extend(trajectory["values"])
+        rollout["returns"].extend(returns)
 
         if episode % ROLLOUT_EPISODES == 0:
             ppo_update(model, optimizer, rollout)
-            rollout = {"states": [], "masks": [], "actions": [], "log_probs": [], "values": [], "rewards": []}
+            rollout = {"states": [], "masks": [], "actions": [], "log_probs": [], "values": [], "returns": []}
 
         rows.append(
             {
@@ -162,6 +168,8 @@ def train_ppo(episodes, seed, out_dir):
     ppo_update(model, optimizer, rollout)
 
     save_results(rows, out_dir, "ppo_diverse")
+    torch.save(model.state_dict(), out_dir / "ppo_diverse_model.pt")
     memory.save(out_dir / "discovered_solutions.txt")
+    print("saved:", out_dir / "ppo_diverse_model.pt")
     print("saved:", out_dir / "discovered_solutions.txt")
     return rows

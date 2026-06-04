@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 
-RUN_DIR = Path("results/brainblock_diverse")
+RUN_DIR = Path("training_results/brainblock_diverse")
 OUTPUT_DIR = RUN_DIR / "solution_images"
 
 COLORS = {

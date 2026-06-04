@@ -1,0 +1,90 @@
+Solution 1 | seen 1 time(s)
+O O O O I I I I
+O O O O I I I I
+L L L Z Z L L L
+L T Z Z T Z Z L
+T T T T T T Z Z
+
+Solution 2 | seen 2 time(s)
+O O L I I I I I
+O O L L L O O I
+L L L Z Z O O I
+L T Z Z T Z Z I
+T T T T T T Z Z
+
+Solution 3 | seen 23749 time(s)
+L L Z Z L L L I
+L O O Z Z T L I
+L O O T T T T I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 4 | seen 85 time(s)
+O O Z Z T T T I
+O O L Z Z T L I
+L L L T L L L I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 5 | seen 1 time(s)
+O O I I I I L I
+O O Z T T T L I
+O O Z Z T L L I
+O O L Z T Z Z I
+L L L T T T Z Z
+
+Solution 6 | seen 81 time(s)
+L L Z Z T T T I
+L O O Z Z T L I
+L O O T L L L I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 7 | seen 159633 time(s)
+O O Z Z L L L I
+O O L Z Z T L I
+L L L T T T T I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 8 | seen 25 time(s)
+O O Z Z I I I I
+O O L Z Z T L L
+L L L T T T T L
+O O T T T Z Z L
+O O I I I I Z Z
+
+Solution 9 | seen 8 time(s)
+L L Z Z I I I I
+L O O Z Z T L L
+L O O T T T T L
+O O T T T Z Z L
+O O I I I I Z Z
+
+Solution 10 | seen 29 time(s)
+L L T T T Z L I
+L O O T Z Z L I
+L O O T Z L L I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 11 | seen 47 time(s)
+O O T T T Z L I
+O O L T Z Z L I
+L L L T Z L L I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 12 | seen 10 time(s)
+L L T T T Z Z I
+L O O T Z Z L I
+L O O T L L L I
+O O T T T Z Z I
+O O I I I I Z Z
+
+Solution 13 | seen 12 time(s)
+O O T T T Z Z I
+O O L T Z Z L I
+L L L T L L L I
+O O T T T Z Z I
+O O I I I I Z Z

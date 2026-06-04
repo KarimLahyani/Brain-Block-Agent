@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from collections import Counter
 
-RUN_DIR = Path("results/brainblock_diverse")
+RUN_DIR = Path("training_results/brainblock_diverse")
 OUTPUT_PATH = RUN_DIR / "solution_frequencies_aggregated.png"
 SEEDS = [42, 100, 123, 456, 789]
 

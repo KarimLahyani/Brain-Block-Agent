@@ -13,12 +13,14 @@ PIECES = {
 }
 
 PIECE_NAMES = list(PIECES.keys())
+PIECE_TO_ID = {name: i + 1 for i, name in enumerate(PIECE_NAMES)}
+ID_TO_PIECE = {i + 1: name for i, name in enumerate(PIECE_NAMES)}
 INITIAL_INVENTORY = {name: 2 for name in PIECES.keys()}
 
 
 def print_board(board):
     for row in board:
-        print(" ".join(str(cell) for cell in row))
+        print(" ".join(ID_TO_PIECE.get(cell, ".") for cell in row))
     print()
 
 
@@ -27,7 +29,7 @@ def in_bounds(row, col):
 
 
 def count_filled(board):
-    return sum(sum(row) for row in board)
+    return sum(1 for row in board for cell in row if cell != 0)
 
 
 def rotate(shape):
@@ -76,7 +78,7 @@ def decode_action(action):
 
 
 def encode_board(board):
-    return [cell for row in board for cell in row]
+    return [cell / len(PIECE_NAMES) for row in board for cell in row]
 
 
 def encode_piece(piece):
@@ -87,7 +89,7 @@ def encode_remaining(queue):
     counts = {p: 0 for p in PIECE_NAMES}
     for p in queue:
         counts[p] += 1
-    return [counts[p] for p in PIECE_NAMES]
+    return [counts[p] / 2 for p in PIECE_NAMES]
 
 
 def encode_state(board, current_piece, queue):

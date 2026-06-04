@@ -1,0 +1,34 @@
+Solution 1 | seen 504 time(s)
+Z Z I I I I O O
+T Z Z T L L O O
+T T T T L L L L
+T Z Z T L L O O
+Z Z I I I I O O
+
+Solution 2 | seen 170 time(s)
+Z Z I I I I L L
+T Z Z T L O O L
+T T T T L O O L
+T Z Z T L L O O
+Z Z I I I I O O
+
+Solution 3 | seen 264 time(s)
+Z Z I I I I L L
+T Z Z T L L L L
+T T T T O O L L
+T Z Z T O O O O
+Z Z I I I I O O
+
+Solution 4 | seen 53 time(s)
+Z Z I I I I O O
+T Z Z T L L O O
+T T T T L O O L
+T Z Z T L O O L
+Z Z I I I I L L
+
+Solution 5 | seen 9 time(s)
+Z Z I I I I L L
+L Z Z T T T Z L
+L L L T T Z Z L
+O O T T T Z O O
+O O I I I I O O

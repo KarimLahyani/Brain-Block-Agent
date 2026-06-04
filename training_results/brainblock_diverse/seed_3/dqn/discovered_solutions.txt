@@ -1,0 +1,965 @@
+Solution 1 | seen 1 time(s)
+O O Z T T T Z Z
+O O Z Z T Z Z I
+L L T Z O O L I
+L T T T O O L I
+L I I I I L L I
+
+Solution 2 | seen 1 time(s)
+T I I I I L L L
+T T T O O L Z L
+T T T O O L Z Z
+O O T Z Z L L Z
+O O Z Z I I I I
+
+Solution 3 | seen 1 time(s)
+T T T T T T O O
+I T Z Z T Z O O
+I Z Z L Z Z O O
+I L L L Z L O O
+I I I I I L L L
+
+Solution 4 | seen 2 time(s)
+O O O O Z T T T
+O O O O Z Z T I
+L L T Z Z Z L I
+L T T T Z Z L I
+L I I I I L L I
+
+Solution 5 | seen 1 time(s)
+I I I I Z Z O O
+I L L Z Z Z O O
+I L T T T Z Z L
+I L T T O O Z L
+I T T T O O L L
+
+Solution 6 | seen 1 time(s)
+Z Z L L L O O I
+T Z Z T L O O I
+T T T T O O L I
+T Z Z T O O L I
+Z Z I I I I L L
+
+Solution 7 | seen 1 time(s)
+I I I I Z Z L L
+L L T Z Z O O L
+L T T T T O O L
+L Z Z T T T O O
+Z Z I I I I O O
+
+Solution 8 | seen 1 time(s)
+O O I I I I L L
+O O Z Z T O O L
+T Z Z T T O O L
+T T Z Z T L L L
+T Z Z I I I I L
+
+Solution 9 | seen 1 time(s)
+Z Z T T T L L L
+I Z Z T L L Z L
+I O O O O L Z Z
+I O O O O L T Z
+I I I I I T T T
+
+Solution 10 | seen 1 time(s)
+I I I I Z Z L L
+T T T Z Z O O L
+L T T Z Z O O L
+L T T T Z Z O O
+L L I I I I O O
+
+Solution 11 | seen 2 time(s)
+L I I I I L L L
+L T T T Z Z Z L
+L L T Z Z T Z Z
+O O O O T T T Z
+O O O O I I I I
+
+Solution 12 | seen 1 time(s)
+L L I I I I O O
+L L L L Z Z O O
+L L T Z Z Z Z T
+O O T T Z Z T T
+O O T I I I I T
+
+Solution 13 | seen 6087 time(s)
+I I I I O O O O
+I T T T O O O O
+I L T Z Z T T T
+I L Z Z Z Z T L
+I L L Z Z L L L
+
+Solution 14 | seen 1 time(s)
+O O Z Z I I I I
+O O T Z Z L L Z
+T T T O O L Z Z
+T T T O O L Z L
+T I I I I L L L
+
+Solution 15 | seen 1 time(s)
+I I I I Z O O I
+L L Z Z Z O O I
+L Z Z Z T T T I
+L Z L O O T T I
+L L L O O T T T
+
+Solution 16 | seen 1 time(s)
+I I I I O O O O
+Z T T T O O O O
+Z Z T T Z Z L L
+L Z T T T Z Z L
+L L L I I I I L
+
+Solution 17 | seen 1 time(s)
+O O I I I I O O
+O O Z T T T O O
+L Z Z Z T T L L
+L Z Z Z T T T L
+L L Z I I I I L
+
+Solution 18 | seen 2 time(s)
+L I I I I Z L L
+L T T T Z Z Z L
+L L T T Z Z Z L
+O O T T T Z O O
+O O I I I I O O
+
+Solution 19 | seen 1 time(s)
+L L L Z O O O O
+L Z Z Z O O O O
+Z Z Z I I I I L
+Z T T T T L L L
+T T T T I I I I
+
+Solution 20 | seen 1 time(s)
+O O O O I I I I
+O O O O T T T Z
+L I I I I T Z Z
+L Z Z T T T Z L
+L L Z Z T L L L
+
+Solution 21 | seen 2 time(s)
+O O I I I I O O
+O O Z Z Z Z O O
+L L T Z Z Z Z L
+L T T T T T T L
+L I I I I T L L
+
+Solution 22 | seen 1 time(s)
+I I I I T L L L
+O O I T T L Z Z
+O O I T T Z Z L
+O O I T T Z Z L
+O O I T Z Z L L
+
+Solution 23 | seen 1 time(s)
+O O I I I I L I
+O O Z T T T L I
+L L Z Z T L L I
+L O O Z T Z Z I
+L O O T T T Z Z
+
+Solution 24 | seen 1 time(s)
+Z Z I I I I L L
+T Z Z T L L L L
+T T T T O O L L
+T Z Z T O O O O
+Z Z I I I I O O
+
+Solution 25 | seen 1 time(s)
+Z I I I I T T T
+Z Z O O O O T I
+L Z O O O O L I
+L T T T Z Z L I
+L L T Z Z L L I
+
+Solution 26 | seen 1 time(s)
+O O T T T L L I
+O O Z T O O L I
+L Z Z T O O L I
+L Z T T T Z Z I
+L L I I I I Z Z
+
+Solution 27 | seen 1 time(s)
+O O I I I I O O
+O O Z T T T O O
+L Z Z T T L L L
+L Z T T T Z Z L
+L L I I I I Z Z
+
+Solution 28 | seen 1 time(s)
+L Z T T T O O I
+L Z Z T Z O O I
+L L Z T Z Z L I
+O O T T T Z L I
+O O I I I I L L
+
+Solution 29 | seen 1 time(s)
+I I I I I Z O O
+I T T T Z Z O O
+I L T Z Z O O L
+I L Z Z T O O L
+L L Z T T T L L
+
+Solution 30 | seen 1 time(s)
+Z Z I I I I O O
+L Z Z T T T O O
+L L L T T Z L L
+O O T T T Z Z L
+O O I I I I Z L
+
+Solution 31 | seen 1 time(s)
+L I I I I Z Z I
+L L L T Z Z Z I
+L L T T T Z Z I
+L O O O O Z T I
+L O O O O T T T
+
+Solution 32 | seen 1 time(s)
+Z I I I I O O L
+Z Z T Z Z O O L
+T Z T T Z Z L L
+T T T L L L O O
+T I I I I L O O
+
+Solution 33 | seen 9662 time(s)
+I I I I O O O O
+I T T T O O O O
+I L T Z Z L L L
+I L Z Z Z Z T L
+I L L Z Z T T T
+
+Solution 34 | seen 1 time(s)
+L I I I I T T T
+L T T T Z Z T I
+L L T Z L Z Z I
+O O Z Z L O O I
+O O Z L L O O I
+
+Solution 35 | seen 314 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 36 | seen 1 time(s)
+O O I I I I L L
+O O Z I I I I L
+L Z Z Z T T T L
+L Z Z Z T T O O
+L L Z T T T O O
+
+Solution 37 | seen 7555 time(s)
+I I I I O O O O
+I T T T O O O O
+I L T Z Z Z L L
+I L Z Z T Z Z L
+I L L T T T Z L
+
+Solution 38 | seen 1 time(s)
+I I I I T L L L
+I Z Z T T L O O
+I L Z Z T T O O
+I L Z Z T T O O
+I L L Z Z T O O
+
+Solution 39 | seen 1 time(s)
+T I I I I Z O O
+T T T L Z Z O O
+T T T L Z Z L L
+O O T L L Z Z L
+O O I I I I Z L
+
+Solution 40 | seen 1 time(s)
+O O Z I I I I L
+O O Z Z T L L L
+T Z Z Z T T L L
+T T Z Z T O O L
+T I I I I O O L
+
+Solution 41 | seen 1 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L T T T Z Z
+L T Z Z T Z Z L
+T T T Z Z L L L
+
+Solution 42 | seen 4 time(s)
+Z Z I I I I O O
+I Z Z T T T O O
+I L O O T L L L
+I L O O T Z Z L
+I L L T T T Z Z
+
+Solution 43 | seen 1 time(s)
+L L L I I I I Z
+L O O L L L Z Z
+T O O L O O Z T
+T T Z Z O O T T
+T Z Z I I I I T
+
+Solution 44 | seen 1 time(s)
+I L L T T T O O
+I L Z Z T Z O O
+I L T Z Z Z Z L
+I T T T O O Z L
+I I I I O O L L
+
+Solution 45 | seen 1 time(s)
+O O I I I I Z Z
+O O T T T Z Z I
+L L L T O O L I
+L Z Z T O O L I
+Z Z T T T L L I
+
+Solution 46 | seen 7117 time(s)
+I I I I O O O O
+I T T T O O O O
+I L T Z Z L L L
+I L Z Z T Z Z L
+I L L T T T Z Z
+
+Solution 47 | seen 1 time(s)
+Z L L I I I I T
+Z Z L T Z Z T T
+L Z L T T Z Z T
+L L L T O O O O
+I I I I O O O O
+
+Solution 48 | seen 1 time(s)
+O O T T T Z O O
+O O T T Z Z O O
+L T T T Z Z L L
+L I I I I Z Z L
+L L I I I I Z L
+
+Solution 49 | seen 1 time(s)
+I I I I Z Z L L
+O O T T T Z Z L
+O O T T O O Z L
+L T T T O O Z Z
+L L L I I I I Z
+
+Solution 50 | seen 1 time(s)
+Z Z L L I T T T
+L Z Z L I Z T I
+L L L L I Z Z I
+O O O O I T Z I
+O O O O T T T I
+
+Solution 51 | seen 1 time(s)
+I L L O O O O I
+I L Z O O O O I
+I L Z Z T T T I
+I Z Z Z L T T I
+Z Z L L L T T T
+
+Solution 52 | seen 2 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L Z Z L L L
+L Z Z T Z Z T L
+Z Z T T T T T T
+
+Solution 53 | seen 1 time(s)
+I I I I I Z L L
+I O O L Z Z Z L
+I O O L Z Z Z L
+I T L L T Z O O
+T T T T T T O O
+
+Solution 54 | seen 1 time(s)
+L L I I I I O O
+L I I I I Z O O
+L T T T Z Z Z Z
+O O T T Z Z Z L
+O O T T T L L L
+
+Solution 55 | seen 12706 time(s)
+I I I I O O L L
+I T T T O O Z L
+I L T Z Z Z Z L
+I L Z Z T Z O O
+I L L T T T O O
+
+Solution 56 | seen 2 time(s)
+I I I I O O O O
+Z T T T O O O O
+Z Z T Z Z T L L
+L Z Z Z T T T L
+L L L I I I I L
+
+Solution 57 | seen 1 time(s)
+I I I I O O L I
+O O Z Z O O L I
+O O T Z Z L L I
+L T T T Z Z T I
+L L L Z Z T T T
+
+Solution 58 | seen 1 time(s)
+O O I I I I Z Z
+O O T T T Z Z I
+L L Z T L L L I
+L Z Z T L O O I
+L Z T T T O O I
+
+Solution 59 | seen 1 time(s)
+Z I I I I O O I
+Z Z O O Z O O I
+L Z O O Z Z L I
+L T T T T Z L I
+L L T T T T L L
+
+Solution 60 | seen 1 time(s)
+I L L Z Z L L L
+I L Z Z Z Z T L
+I L T Z Z T T T
+I T T T O O O O
+I I I I O O O O
+
+Solution 61 | seen 1 time(s)
+Z Z I I I I O O
+T Z Z T L L O O
+T T T T L L L L
+T Z Z T L L O O
+Z Z I I I I O O
+
+Solution 62 | seen 258 time(s)
+O O I I I I O O
+O O I I I I O O
+T T T Z Z L L L
+L T Z Z Z Z T L
+L L L Z Z T T T
+
+Solution 63 | seen 3 time(s)
+I I I I I L O O
+I O O L L L O O
+I O O Z Z L L L
+I T Z Z T Z Z L
+T T T T T T Z Z
+
+Solution 64 | seen 173 time(s)
+O O I I I I L L
+O O I I I I Z L
+L L L Z Z Z Z L
+L T Z Z T Z O O
+T T T T T T O O
+
+Solution 65 | seen 1 time(s)
+L L L I I I I I
+L T T T Z O O I
+O O T Z Z O O I
+O O L Z Z Z T I
+L L L Z Z T T T
+
+Solution 66 | seen 4 time(s)
+O O I I I I O O
+O O I I I I O O
+Z Z T T T L L L
+L Z Z T T Z Z L
+L L L T T T Z Z
+
+Solution 67 | seen 1 time(s)
+I I I I T Z L L
+O O T T T Z Z L
+O O T T T L Z L
+O O T Z Z L L L
+O O Z Z I I I I
+
+Solution 68 | seen 1 time(s)
+I I I I I Z O O
+I Z L L Z Z O O
+I Z Z L Z L L L
+I T Z L T L O O
+T T T T T T O O
+
+Solution 69 | seen 1 time(s)
+O O I I I I L L
+O O Z T T T L I
+L L Z Z T Z L I
+L O O Z T Z Z I
+L O O T T T Z I
+
+Solution 70 | seen 2 time(s)
+I L O O O O L I
+I L O O O O L I
+I L L Z Z L L I
+I T Z Z T Z Z I
+T T T T T T Z Z
+
+Solution 71 | seen 1 time(s)
+Z Z Z Z I I I I
+I Z Z Z Z L L L
+I L O O T T T L
+I L O O T T O O
+I L L T T T O O
+
+Solution 72 | seen 1 time(s)
+I L L L L L L I
+I O O L L O O I
+I O O Z Z O O I
+I T Z Z Z Z T I
+T T T Z Z T T T
+
+Solution 73 | seen 2799 time(s)
+I I I I O O L L
+I I I I O O Z L
+T T T Z Z Z Z L
+L T Z Z T Z O O
+L L L T T T O O
+
+Solution 74 | seen 1 time(s)
+L I I I I L L I
+L T T T O O L I
+L L T Z O O L I
+O O Z Z T Z Z I
+O O Z T T T Z Z
+
+Solution 75 | seen 1 time(s)
+L I I I I L L L
+L T T T O O Z L
+L L T T O O Z Z
+O O T T T Z Z Z
+O O I I I I Z Z
+
+Solution 76 | seen 116 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L Z Z L L L
+L T Z Z T Z Z L
+T T T T T T Z Z
+
+Solution 77 | seen 1 time(s)
+I L L L O O L L
+I O O L O O L I
+I O O Z Z Z L I
+I T Z Z T Z Z I
+T T T T T T Z I
+
+Solution 78 | seen 1 time(s)
+O O O O I I I I
+O O O O L L L I
+L L L Z Z Z L I
+L T Z Z T Z Z I
+T T T T T T Z I
+
+Solution 79 | seen 1 time(s)
+O O O O I I I I
+O O O O I I I I
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 80 | seen 287 time(s)
+O O I I I I L L
+O O I I I I Z L
+T T T Z Z Z Z L
+L T Z Z T Z O O
+L L L T T T O O
+
+Solution 81 | seen 1 time(s)
+L I I I I T L L
+L T T T T T T L
+L L T Z Z Z Z L
+O O Z Z Z Z O O
+O O I I I I O O
+
+Solution 82 | seen 1083 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 83 | seen 2357 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T Z Z L L L
+L T Z Z T Z Z L
+L L L T T T Z Z
+
+Solution 84 | seen 2 time(s)
+I I I I O O L L
+I I I I O O Z L
+L Z T T T Z Z L
+L Z Z T T Z O O
+L L Z T T T O O
+
+Solution 85 | seen 2116 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T Z Z L L L
+L T Z Z Z Z T L
+L L L Z Z T T T
+
+Solution 86 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+L Z T T T L L L
+L Z Z T T Z Z L
+L L Z T T T Z Z
+
+Solution 87 | seen 178 time(s)
+O O I I I I O O
+O O I I I I O O
+T T T Z Z L L L
+L T Z Z T Z Z L
+L L L T T T Z Z
+
+Solution 88 | seen 1098 time(s)
+I I I I O O L L
+I I I I O O Z L
+L L L Z Z Z Z L
+L T Z Z T Z O O
+T T T T T T O O
+
+Solution 89 | seen 3902 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T Z Z T T T
+L T Z Z Z Z T L
+L L L Z Z L L L
+
+Solution 90 | seen 3548 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T Z Z Z L L
+L T Z Z T Z Z L
+L L L T T T Z L
+
+Solution 91 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+L Z T T T Z L L
+L Z Z T T Z Z L
+L L Z T T T Z L
+
+Solution 92 | seen 1714 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 93 | seen 6 time(s)
+O O O O I I I I
+O O O O I I I I
+T T T Z Z L L L
+L T Z Z T Z Z L
+L L L T T T Z Z
+
+Solution 94 | seen 906 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z Z L L
+L T Z Z T Z Z L
+T T T T T T Z L
+
+Solution 95 | seen 650 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z L L L
+L T Z Z T Z Z L
+T T T T T T Z Z
+
+Solution 96 | seen 7 time(s)
+O O O O I I I I
+O O O O I I I I
+T T T Z Z T T T
+L T Z Z Z Z T L
+L L L Z Z L L L
+
+Solution 97 | seen 254 time(s)
+O O I I I I O O
+O O I I I I O O
+T T T Z Z Z L L
+L T Z Z T Z Z L
+L L L T T T Z L
+
+Solution 98 | seen 6 time(s)
+O O O O I I I I
+O O O O I I I I
+T T T Z Z Z L L
+L T Z Z T Z Z L
+L L L T T T Z L
+
+Solution 99 | seen 6 time(s)
+O O O O I I I I
+O O O O I I I I
+T T T Z Z L L L
+L T Z Z Z Z T L
+L L L Z Z T T T
+
+Solution 100 | seen 7 time(s)
+I I I I O O O O
+I I I I O O O O
+Z Z T T T T T T
+L Z Z T Z Z T L
+L L L Z Z L L L
+
+Solution 101 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T T T T Z L
+L T Z Z T Z Z L
+L L L Z Z Z L L
+
+Solution 102 | seen 551 time(s)
+O O I I I I O O
+O O I I I I O O
+T T T Z Z T T T
+L T Z Z Z Z T L
+L L L Z Z L L L
+
+Solution 103 | seen 1 time(s)
+T T T Z O O O O
+I T Z Z O O O O
+I L Z Z Z T L L
+I L Z Z T T T L
+I L L I I I I L
+
+Solution 104 | seen 1 time(s)
+I I I I O O O O
+L L Z Z O O O O
+L Z Z Z Z T L L
+L T Z Z T T T L
+T T T I I I I L
+
+Solution 105 | seen 3 time(s)
+I I I I O O O O
+I I I I O O O O
+Z Z T T T Z L L
+L Z Z T T Z Z L
+L L L T T T Z L
+
+Solution 106 | seen 127 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L Z Z Z L L
+L T Z Z T Z Z L
+T T T T T T Z L
+
+Solution 107 | seen 3 time(s)
+O O O O I I I I
+O O O O I I I I
+L L L Z Z Z L L
+L T Z Z T Z Z L
+T T T T T T Z L
+
+Solution 108 | seen 4 time(s)
+I I I I O O O O
+I I I I O O O O
+Z Z T T T L L L
+L Z Z T Z Z T L
+L L L Z Z T T T
+
+Solution 109 | seen 2 time(s)
+I I I I I L L L
+I O O L L L Z L
+I O O Z Z Z Z L
+I T Z Z T Z O O
+T T T T T T O O
+
+Solution 110 | seen 147 time(s)
+O O I I I I O O
+O O I I I I O O
+L L L Z Z L L L
+L T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 111 | seen 1 time(s)
+I I I I O O O O
+I L L T O O O O
+I L T T T L L L
+I L Z Z T Z Z L
+I Z Z T T T Z Z
+
+Solution 112 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z T T T
+L Z Z T Z Z T L
+Z Z T T T L L L
+
+Solution 113 | seen 3 time(s)
+I I I I O O O O
+I I I I O O O O
+Z Z T T T L L L
+L Z Z T T Z Z L
+L L L T T T Z Z
+
+Solution 114 | seen 2 time(s)
+I I I I O O L L
+I L L T O O Z L
+I L T T T Z Z L
+I L Z Z T Z O O
+I Z Z T T T O O
+
+Solution 115 | seen 6 time(s)
+I I I I O O L L
+I I I I O O Z L
+Z Z T T T Z Z L
+L Z Z T T Z O O
+L L L T T T O O
+
+Solution 116 | seen 2 time(s)
+I I I I O O O O
+I L L T O O O O
+I L T T T L L L
+I L T Z Z Z Z L
+I T T T Z Z Z Z
+
+Solution 117 | seen 10 time(s)
+O O I I I I O O
+O O I I I I O O
+Z Z T T T T T T
+L Z Z T Z Z T L
+L L L Z Z L L L
+
+Solution 118 | seen 1 time(s)
+O O I I I I L L
+O O Z I I I I L
+Z Z Z Z T T T L
+L Z Z Z T T O O
+L L L T T T O O
+
+Solution 119 | seen 3 time(s)
+O O O O I I I I
+O O O O I I I I
+L L L Z Z T T T
+L T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 120 | seen 1 time(s)
+I I I I I L O O
+I O O L L L O O
+I O O Z Z L L L
+I T Z Z Z Z T L
+T T T Z Z T T T
+
+Solution 121 | seen 2 time(s)
+I I I I O O O O
+I I I I O O O O
+L L Z Z Z T T T
+L Z Z T Z Z T L
+L Z T T T L L L
+
+Solution 122 | seen 6 time(s)
+O O I I I I O O
+O O I I I I O O
+Z Z T T T Z L L
+L Z Z T T Z Z L
+L L L T T T Z L
+
+Solution 123 | seen 1 time(s)
+O O I I I I O O
+O O I I I I O O
+L Z T T T T T T
+L Z Z T Z Z T L
+L L Z Z Z L L L
+
+Solution 124 | seen 2 time(s)
+I I I I O O O O
+I T T T O O O O
+I L T T T T Z Z
+I L Z Z T Z Z L
+I L L Z Z L L L
+
+Solution 125 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L Z Z L L L
+L Z Z T Z Z T L
+Z Z T T T T T T
+
+Solution 126 | seen 1 time(s)
+O O O O I I I I
+O O O O I I I I
+L L L Z Z L L L
+L Z Z T Z Z T L
+Z Z T T T T T T
+
+Solution 127 | seen 2 time(s)
+I I I I O O O O
+I L L T O O O O
+I L T T T T T T
+I L Z Z Z Z T L
+I Z Z Z Z L L L
+
+Solution 128 | seen 33 time(s)
+O O I I I I L L
+O O I I I I Z L
+Z Z T T T Z Z L
+L Z Z T T Z O O
+L L L T T T O O
+
+Solution 129 | seen 2 time(s)
+I I I I O O O O
+I I I I O O O O
+L L L T T T Z Z
+L T Z Z T Z Z L
+T T T Z Z L L L
+
+Solution 130 | seen 1 time(s)
+I I I I I L O O
+I O O L L L O O
+I O O Z Z T T T
+I T Z Z Z Z T L
+T T T Z Z L L L
+
+Solution 131 | seen 2 time(s)
+O O I I I I L L
+O O I I I I Z L
+L Z T T T Z Z L
+L Z Z T T Z O O
+L L Z T T T O O
+
+Solution 132 | seen 1 time(s)
+O O I I I I O O
+O O I I I I O O
+T T T T T T Z Z
+L T Z Z T Z Z L
+L L L Z Z L L L
+
+Solution 133 | seen 1 time(s)
+O O I I I I O O
+O O Z L L T O O
+Z Z Z Z L T T T
+L Z Z Z L T T T
+L L L I I I I T
+
+Solution 134 | seen 1 time(s)
+O O L I I I I I
+O O L L L O O I
+T T T Z Z O O I
+L T Z Z Z Z T I
+L L L Z Z T T T
+
+Solution 135 | seen 1 time(s)
+O O I I I I O O
+O O I I I I O O
+L L Z Z Z T T T
+L Z Z T Z Z T L
+L Z T T T L L L
+
+Solution 136 | seen 5 time(s)
+O O I I I I O O
+O O I I I I O O
+Z Z T T T L L L
+L Z Z T Z Z T L
+L L L Z Z T T T
+
+Solution 137 | seen 1 time(s)
+O O I I I I O O
+O O I I I I O O
+L Z T T T L L L
+L Z Z T Z Z T L
+L L Z Z Z T T T
+
+Solution 138 | seen 1 time(s)
+I I I I O O O O
+I I I I O O O O
+T T T T T T Z Z
+L T Z Z T Z Z L
+L L L Z Z L L L

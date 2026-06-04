@@ -1,0 +1,153 @@
+Solution 1 | seen 50 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L L L Z Z I
+I O O L L O O I
+I O O L L O O I
+
+Solution 2 | seen 178 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L O O Z Z I
+I L L O O O O I
+I L L L L O O I
+
+Solution 3 | seen 63 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L L L Z Z I
+I L O O L O O I
+I L O O L O O I
+
+Solution 4 | seen 129 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L Z Z O O I
+I L O O L O O I
+I L O O L L L I
+
+Solution 5 | seen 140 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L O O Z Z I
+I L L O O O O I
+I L L L L O O I
+
+Solution 6 | seen 56 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L L L Z Z I
+I O O L L O O I
+I O O L L O O I
+
+Solution 7 | seen 34 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L Z Z L L I
+I L O O O O L I
+I L O O O O L I
+
+Solution 8 | seen 36 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L Z Z O O I
+I L O O L O O I
+I L O O L L L I
+
+Solution 9 | seen 40 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L O O L Z Z I
+I L O O L O O I
+I L L L L O O I
+
+Solution 10 | seen 15 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L Z Z L L I
+I L O O O O L I
+I L O O O O L I
+
+Solution 11 | seen 6 time(s)
+T T T T T T Z Z
+I T Z Z T Z Z I
+I O O Z Z O O I
+I O O L L O O I
+I L L L L L L I
+
+Solution 12 | seen 40 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I O O L L Z Z I
+I O O L L O O I
+I L L L L O O I
+
+Solution 13 | seen 58 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I O O Z Z O O I
+I O O L L O O I
+I L L L L L L I
+
+Solution 14 | seen 65 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I O O L L Z Z I
+I O O L L O O I
+I L L L L O O I
+
+Solution 15 | seen 21 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L O O L Z Z I
+I L O O L O O I
+I L L L L O O I
+
+Solution 16 | seen 6 time(s)
+T T T T T T Z Z
+I T Z Z T Z Z I
+I L L Z Z L L I
+I L O O O O L I
+I L O O O O L I
+
+Solution 17 | seen 18 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L L L Z Z I
+I L O O L O O I
+I L O O L O O I
+
+Solution 18 | seen 18 time(s)
+T T T Z Z T T T
+I T Z Z Z Z T I
+I L L L L Z Z I
+I L L O O O O I
+I L L O O O O I
+
+Solution 19 | seen 3 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I O O Z Z O O I
+I O O L L O O I
+I L L L L L L I
+
+Solution 20 | seen 16 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I L L L L Z Z I
+I L L O O O O I
+I L L O O O O I
+
+Solution 21 | seen 1 time(s)
+Z Z T T T T T T
+I Z Z T Z Z T I
+I O O Z Z L L I
+I O O L O O L I
+I L L L O O L I
+
+Solution 22 | seen 7 time(s)
+T T T T T T Z Z
+I T Z Z T Z Z I
+I L L Z Z O O I
+I L O O L O O I
+I L O O L L L I

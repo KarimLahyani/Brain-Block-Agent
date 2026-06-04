@@ -7,6 +7,7 @@ from brainblock_standard.pieces import (
     COLS,
     INITIAL_INVENTORY,
     N_ACTIONS,
+    PIECE_TO_ID,
     ROWS,
     count_filled,
     decode_action,
@@ -22,7 +23,7 @@ class BrainBlockGymEnv(gym.Env):
         super().__init__()
 
         self.action_space = spaces.Discrete(N_ACTIONS)
-        self.observation_space = spaces.Box(low=0, high=2, shape=(50,), dtype=np.float32)
+        self.observation_space = spaces.Box(low=0, high=1, shape=(50,), dtype=np.float32)
 
         self.board = None
         self.queue = None
@@ -63,14 +64,15 @@ class BrainBlockGymEnv(gym.Env):
             if not in_bounds(r, c):
                 return False
 
-            if self.board[r][c] == 1:
+            if self.board[r][c] != 0:
                 return False
 
         return True
 
-    def place(self, shape, row, col):
+    def place(self, piece, shape, row, col):
+        piece_id = PIECE_TO_ID[piece]
         for dr, dc in shape:
-            self.board[row + dr][col + dc] = 1
+            self.board[row + dr][col + dc] = piece_id
 
     def get_shape_from_action(self, action):
         orientation, row, col = decode_action(action)
@@ -101,6 +103,7 @@ class BrainBlockGymEnv(gym.Env):
         return mask
 
     def step(self, action):
+        piece = self.current_piece
         shape, row, col = self.get_shape_from_action(action)
 
         if not self.is_valid(shape, row, col):
@@ -112,7 +115,7 @@ class BrainBlockGymEnv(gym.Env):
             info["terminal_reason"] = "invalid"
             return self.get_obs(), reward, terminated, truncated, info
 
-        self.place(shape, row, col)
+        self.place(piece, shape, row, col)
 
         if len(self.queue) == 0:
             self.current_piece = None

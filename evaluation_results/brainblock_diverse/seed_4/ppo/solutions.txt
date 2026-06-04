@@ -1,0 +1,13 @@
+Solution 1 | seen 995 time(s)
+O O O O L L L I
+O O O O Z Z L I
+L L Z Z T Z Z I
+L Z Z T T T T I
+L I I I I T T T
+
+Solution 2 | seen 3 time(s)
+O O O O I I I I
+O O O O Z Z L L
+L L Z Z T Z Z L
+L Z Z T T T T L
+L I I I I T T T
